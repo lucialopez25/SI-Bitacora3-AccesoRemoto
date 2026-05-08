@@ -57,3 +57,13 @@ Creé un archivo en el escritorio denominado PRUEBA_LOGRADA.txt.
 Escribí un mensaje de confirmación dentro del archivo.
 
 <img width="1915" height="986" alt="image" src="https://github.com/user-attachments/assets/7ebed303-ab24-423e-8e7a-8fc381d3667b" />
+## Reflexion
+Tras completar este laboratorio, queda claro por qué en entornos profesionales y de producción (como el servidor que simulamos en Dublín) el uso de SSH predomina sobre el de RDP. Aquí detallo las razones principales:
+
+Consumo de Recursos (Eficiencia): Un servidor de producción debe dedicar toda su potencia a los servicios (webs, bases de datos, etc.). SSH es extremadamente ligero. Por el contrario, un entorno gráfico (RDP) consume una gran cantidad de memoria RAM y CPU innecesariamente solo para dibujar ventanas y colores que nadie va a ver físicamente.
+
+Seguridad y Superficie de Ataque: Como hemos practicado en la Fase 3.1, SSH nos permite cerrar el acceso por contraseña y usar criptografía de clave pública, algo muy robusto. RDP, al ser un protocolo mucho más complejo, suele tener más vulnerabilidades y es un objetivo más "goloso" para los atacantes.
+
+Velocidad y Latencia: En conexiones remotas a larga distancia (como de España a Irlanda), el texto viaja mucho más rápido que las imágenes. Administrar por terminal es instantáneo, mientras que el escritorio remoto puede tener "lag" o retrasos que dificultan el trabajo.
+
+Automatización: Es mucho más fácil programar un script para que haga tareas en 100 servidores a la vez vía SSH que intentar mover el ratón manualmente en 100 escritorios remotos.
